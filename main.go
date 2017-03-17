@@ -32,12 +32,8 @@ func loadCertificate(b64data string) (*x509.Certificate, error) {
 func ValidateToken(tokenStr string) (*jwt.Token, error) {
 	parser := new(jwt.Parser)
 	parser.UseJSONNumber = true
+	parser.ValidMethods = []string{"RS256", "RS384", "RS512"}
 	parsed, err := parser.Parse(tokenStr, func(token *jwt.Token) (interface{}, error) {
-		// Verify signing method
-		if _, ok := token.Method.(*jwt.SigningMethodRSA); !ok {
-			return nil, fmt.Errorf("Unexpected signing method: %v", token.Header["alg"])
-		}
-
 		// Extract certificates from x5c header
 		certStrings, ok := token.Header["x5c"].([]interface{})
 		if !ok {
