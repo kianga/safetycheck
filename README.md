@@ -7,7 +7,7 @@ Command line utility for verifying [JSON Web Tokens](http://self-issued.info/doc
 Set `GOPATH` as necessary, then:
 
 ```
-go install github.com/kianga/safetycheck/cmd/safetycheck
+go get github.com/kianga/safetycheck
 ```
 
 ## Usage
