@@ -24,4 +24,5 @@ $ safetycheck < bad-token.txt
 
 ## Dependencies
 
+* [Go 1.8](https://golang.org/) - might work with earlier releases too
 * [jwt-go](https://github.com/dgrijalva/jwt-go)
