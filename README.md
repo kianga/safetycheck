@@ -1,6 +1,6 @@
 # safetycheck
 
-Command line utility for verifying (JSON Web Tokens)[http://self-issued.info/docs/draft-ietf-oauth-json-web-token.html] from Google's SafetyNet API
+Command line utility for verifying [JSON Web Tokens](http://self-issued.info/docs/draft-ietf-oauth-json-web-token.html) from Google's SafetyNet API
 
 ## Installation
 
@@ -24,4 +24,4 @@ $ safetycheck < bad-token.txt
 
 ## Dependencies
 
-* (jwt-go)[https://github.com/dgrijalva/jwt-go]
+* [jwt-go](https://github.com/dgrijalva/jwt-go)
